@@ -17,13 +17,30 @@ class App extends Component {
             this.startCounter=setInterval(() => {
               this.setState({counter:this.state.counter+1})},1000
             )}
+        
+        //the following block of codes is to store the current state//
+        
+            pauseCounter=()  => {
+              // this.setState({})
+            
+            
+              if(this.state.counter>=1) {  
+                let pauseNum = this.state.counter
+                return pauseNum
+
+            }
+
+
+        }
+
 
   render() {
     return (
       <div>
         <h1>{this.state.counter}</h1>
+        <h1>{this.state.pauseNum}</h1>
        <button className="startbtn" onClick={this.beginCounter}> Start</button>
-       <button className="pausebtn"> Pause</button>
+       <button className="pausebtn" onClick={this.pauseCounter}> Pause</button>
        <button className="resetbtn"> Reset</button>
       
          

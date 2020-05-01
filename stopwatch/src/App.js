@@ -6,7 +6,7 @@ class App extends Component {
     super(props)
 
     //the following block of codes is to initialize state, setting counter to zero//
-        this.state = {counter:0  }
+        this.state = {counter:0}
 
   }  // the following block of codes is for handling the start, pause and reset buttons//
         // beginCounter=() => {this.setState({counter:this.state.counter+1})}
@@ -20,7 +20,7 @@ class App extends Component {
         
         //the following block of codes is to store the current state//
         
-            pauseCounter=()  => {
+            pauseCounter=() => {
               // this.setState({})
             
             
@@ -36,12 +36,12 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <div className="appBody">
         <h1>{this.state.counter}</h1>
         <h1>{this.state.pauseNum}</h1>
        <button className="startbtn" onClick={this.beginCounter}> Start</button>
        <button className="pausebtn" onClick={this.pauseCounter}> Pause</button>
-       <button className="resetbtn"> Reset</button>
+       <button className="resetbtn" onClick={this.resetCounter}> Reset</button>
       
          
        

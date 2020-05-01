@@ -5,7 +5,8 @@ class App extends Component {
   constructor(props) {
     super(props)
 
-        this.state = {  }
+    //the following block of codes is to initialize state, setting counter to zero//
+        this.state = {counter:0  }
 
   }
   render() {

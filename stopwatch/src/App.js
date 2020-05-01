@@ -9,12 +9,14 @@ class App extends Component {
         this.state = {counter:0  }
 
   }  // the following block of codes is for handling the start, pause and reset buttons//
+        beginCounter=() => {this.setState({counter:this.state.counter+1})}
         
 
   render() {
     return (
       <div>
-       <button className="startbtn" onClick={beginCounter}> Start</button>
+        <h1>{this.state.counter}</h1>
+       <button className="startbtn" onClick={this.beginCounter}> Start</button>
        <button className="pausebtn"> Pause</button>
        <button className="resetbtn"> Reset</button>
       
